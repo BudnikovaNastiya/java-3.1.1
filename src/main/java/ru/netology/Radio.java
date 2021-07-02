@@ -42,6 +42,7 @@ public class Radio {
         }
         return currentVolume;
     }
+
     // Переключение станций
     public int getCurrentRadioStation() {
         return currentRadioStation;
@@ -56,6 +57,12 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
+        if (currentRadioStation > maxRadioStation) {
+            return;
+        }
+        if (currentRadioStation < minRadioStation) {
+            return;
+        }
         this.currentRadioStation = currentRadioStation;
     }
 

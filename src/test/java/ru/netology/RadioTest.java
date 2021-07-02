@@ -77,11 +77,12 @@ class RadioTest {
         assertEquals (0, actual);
 
     }
+
     @Test
     public void shouldNextStationOverMax() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(10);
-        int actual = radio.changeNextRadioStation();
+        int actual = radio.getCurrentRadioStation();
 
         assertEquals (0, actual);
 
