@@ -4,32 +4,33 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class RadioTest {
+public class RadioTest {
+
     @Test
     public void shouldVolumeUpUnderMax() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
         int actual = radio.volumeUp();
 
-        assertEquals (10, actual);
+        assertEquals (100, actual);
 
     }
     @Test
     public void shouldVolumeUpMax() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         int actual = radio.volumeUp();
 
-        assertEquals (10, actual);
+        assertEquals (100, actual);
 
     }
     @Test
     public void shouldVolumeUpOverMax() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(101);
         int actual = radio.volumeUp();
 
-        assertEquals (10, actual);
+        assertEquals (100, actual);
 
     }
 
@@ -71,7 +72,7 @@ class RadioTest {
     @Test
     public void shouldNextStationMax() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(9);
+        radio.setCurrentRadioStation(10);
         int actual = radio.changeNextRadioStation();
 
         assertEquals (0, actual);
@@ -81,7 +82,7 @@ class RadioTest {
     @Test
     public void shouldNextStationOverMax() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(10);
+        radio.setCurrentRadioStation(11);
         int actual = radio.getCurrentRadioStation();
 
         assertEquals (0, actual);
@@ -102,7 +103,7 @@ class RadioTest {
         radio.setCurrentRadioStation(0);
         int actual = radio.changePrevRadioStation();
 
-        assertEquals (9, actual);
+        assertEquals (10, actual);
     }
 
     @Test
@@ -111,6 +112,6 @@ class RadioTest {
         radio.setCurrentRadioStation(-1);
         int actual = radio.changePrevRadioStation();
 
-        assertEquals (9, actual);
+        assertEquals (10, actual);
     }
 }
