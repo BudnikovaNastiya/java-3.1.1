@@ -75,7 +75,7 @@ public class RadioTest {
         radio.setCurrentRadioStation(10);
         int actual = radio.changeNextRadioStation();
 
-        assertEquals (0, actual);
+        assertEquals (1, actual);
 
     }
 
@@ -103,7 +103,7 @@ public class RadioTest {
         radio.setCurrentRadioStation(0);
         int actual = radio.changePrevRadioStation();
 
-        assertEquals (10, actual);
+        assertEquals (9, actual);
     }
 
     @Test
@@ -112,6 +112,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(-1);
         int actual = radio.changePrevRadioStation();
 
-        assertEquals (10, actual);
+        assertEquals (9, actual);
     }
 }
