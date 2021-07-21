@@ -1,5 +1,12 @@
 package ru.netology;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Radio {
     private int currentRadioStation;
     private int radioStationNumber = 10;
@@ -9,40 +16,6 @@ public class Radio {
     private int minVolume = 0;
     private int maxRadioStation = radioStationNumber - 1;
 
-    public Radio() {
-    }
-    public Radio(int maxRadioStation, int radioStationNumber, int currentRadioStation, int minRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-        this.radioStationNumber = radioStationNumber;
-        this.currentRadioStation = currentRadioStation;
-        this.minRadioStation = minRadioStation;
-    }
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-    public Radio(int currentRadioStation) {
-        this.maxRadioStation = currentRadioStation;
-    }
-
-    public int getRadioStationNumber() {
-        return radioStationNumber;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;
-    }
 
     public int volumeUp() {
         if (currentVolume < maxVolume) {
@@ -60,19 +33,6 @@ public class Radio {
             this.currentVolume = minVolume;
         }
         return currentVolume;
-    }
-
-    // Переключение станций
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
