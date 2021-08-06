@@ -11,17 +11,13 @@ public class Radio {
 
     public Radio() {
     }
-    public Radio(int maxRadioStation, int radioStationNumber, int currentRadioStation, int minRadioStation) {
-        this.maxRadioStation = maxRadioStation;
+
+    public Radio(int radioStationNumber) {
         this.radioStationNumber = radioStationNumber;
-        this.currentRadioStation = currentRadioStation;
-        this.minRadioStation = minRadioStation;
     }
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-    public Radio(int currentRadioStation) {
-        this.maxRadioStation = currentRadioStation;
+
+    public void setRadioStationNumber(int radioStationNumber) {
+        this.radioStationNumber = radioStationNumber;
     }
 
     public int getRadioStationNumber() {
