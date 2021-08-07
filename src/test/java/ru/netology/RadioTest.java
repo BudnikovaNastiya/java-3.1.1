@@ -88,7 +88,14 @@ public class RadioTest {
         assertEquals (0, actual);
 
     }
+    @Test
+    public void shouldNextStationOverMax20() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        int actual = radio.getCurrentRadioStation();;
 
+        assertEquals (15, actual);
+    }
     @Test
     public void shouldPrevStationUnderMin() {
         Radio radio = new Radio();
@@ -114,4 +121,5 @@ public class RadioTest {
 
         assertEquals (9, actual);
     }
+
 }
